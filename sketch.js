@@ -25,14 +25,14 @@ function setup() {
 }
 
 function draw() {
-  image(bg,windowWidth/2,windowHeigth/2,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,windowHeigth,windowHeigth);
   let ground = height/1.82;
   if (shapeY + radius > ground) {
     shapeSpeed = -shapeSpeed * 0.2;
     shapeY = ground - radius;
   }
   
-  image(bg,windowWidth/2,windowHeigth/2,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,windowHeigth,windowHeigth);
 
   shapeY += shapeSpeed;
   shapeSpeed += gravity;
@@ -103,7 +103,7 @@ ellipse(pupil2X, pupilY+50,pupilSize, pupilSize);
 
 function mousePressed() {
   
-  image(bg,windowWidth/2,windowHeigth/2,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,windowHeigth,windowHeigth);
   vertexCount = floor(random(9, 12));
 
   vertices = [];
