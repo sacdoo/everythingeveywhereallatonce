@@ -20,19 +20,19 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeigth);
   background(255);
 }
 
 function draw() {
-  image(bg,0,0,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,800,800);
   let ground = height/1.82;
   if (shapeY + radius > ground) {
     shapeSpeed = -shapeSpeed * 0.2;
     shapeY = ground - radius;
   }
   
-  image(bg,0,0,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,800,800);
 
   shapeY += shapeSpeed;
   shapeSpeed += gravity;
@@ -103,7 +103,7 @@ ellipse(pupil2X, pupilY+50,pupilSize, pupilSize);
 
 function mousePressed() {
   
-  image(bg,0,0,800,800);
+  image(bg,windowWidth/2,windowHeigth/2,800,800);
   vertexCount = floor(random(9, 12));
 
   vertices = [];
